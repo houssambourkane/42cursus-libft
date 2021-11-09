@@ -6,18 +6,18 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:37 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/05 11:17:46 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/08 16:55:13 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <stdlib.h>
-size_t ft_strlen(const char *str)
-{
-    size_t c;
 
-    c = 0;
-    while(str[c])
-        c++;
-    return (c);
+size_t	ft_strlen(const char *str)
+{
+	size_t	c;
+
+	c = 0;
+	while (str[c])
+		c++;
+	return (c);
 }

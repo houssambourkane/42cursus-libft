@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbourkan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:01:08 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/02 21:23:18 by hbourkan         ###   ########.fr       */
+/*   Created: 2021/11/07 20:56:35 by hbourkan          #+#    #+#             */
+/*   Updated: 2021/11/08 16:45:24 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
 
-
-
-int main()
+void	ft_lstclear(t_list **lst, void (del)(void*))
 {
-    char *s; 
-    s = ft_substr("houssam", 'u', 3);
-	printf("%s", s);	
+	t_list	*lst1;
+	t_list	*lst2;
+
+	if (*lst)
+	{
+		lst1 = *lst;
+		while (lst1)
+		{
+			lst2 = lst1;
+			del(lst1->content);
+			lst1 = lst1->next;
+			free(lst2);
+		}
+		*lst = NULL;
+	}
 }

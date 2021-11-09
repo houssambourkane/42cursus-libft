@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 20:40:42 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 16:38:17 by hbourkan         ###   ########.fr       */
+/*   Created: 2021/11/07 20:20:57 by hbourkan          #+#    #+#             */
+/*   Updated: 2021/11/08 17:21:35 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	size_t	i;
+	t_list	*temp;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
-}
-
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*ptr;
-
-	ptr = malloc (count * size);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, count);
-	return (ptr);
+	if (lst == NULL)
+		return ;
+	temp = lst;
+	del(temp->content);
+	lst = temp->next;
+	free(temp);
 }

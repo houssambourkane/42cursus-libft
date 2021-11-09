@@ -6,21 +6,20 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:27:38 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/07 16:36:03 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/08 17:21:16 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst)
-    {
-        while (lst->next)
-        {
-            lst = lst->next;
-        }
-    }
-       
-    return lst;
+	if (lst)
+	{
+		while (lst->next)
+		{
+			lst = lst->next;
+		}
+	}
+	return (lst);
 }
