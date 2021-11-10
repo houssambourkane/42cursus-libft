@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 20:56:35 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 16:45:24 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 15:33:50 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (del)(void*))
 {
-	t_list	*lst1;
-	t_list	*lst2;
+	t_list	*temp1;
 
 	if (*lst)
 	{
-		lst1 = *lst;
-		while (lst1)
+		while (*lst)
 		{
-			lst2 = lst1;
-			del(lst1->content);
-			lst1 = lst1->next;
-			free(lst2);
+			temp1 = *lst;
+			del(temp1->content);
+			*lst = temp1->next;
+			free(temp1);
 		}
 		*lst = NULL;
 	}

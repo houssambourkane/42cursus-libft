@@ -6,19 +6,19 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:29:58 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 20:34:38 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:28:17 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(char const *s1, size_t n)
+static char	*ft_strndup(char const *s1, size_t n)
 {
-	char	*s2;
 	size_t	i;
+	char	*s2;
 
 	i = 0;
-	s2 = malloc((sizeof(char) * n) + 1);
+	s2 = malloc(sizeof(char) * (n + 1));
 	if (s2 == NULL)
 		return (NULL);
 	while (s1[i] && i < n)
@@ -30,7 +30,7 @@ char	*ft_strndup(char const *s1, size_t n)
 	return (s2);
 }
 
-int	nb_chaine(char const *s, char c)
+static int	nb_chaine(char const *s, char c)
 {
 	int	i;
 	int	cpt;
@@ -46,7 +46,7 @@ int	nb_chaine(char const *s, char c)
 	return (cpt + 1);
 }
 
-int	compteur_carac(char const *s, char c, int i)
+static int	compteur_carac(char const *s, char c, int i)
 {	
 	int	cpt;
 

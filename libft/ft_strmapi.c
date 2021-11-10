@@ -6,21 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 21:24:29 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:02:34 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:37:24 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	c;
-
-	c = 0;
-	while (str[c])
-		c++;
-	return (c);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

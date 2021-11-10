@@ -6,13 +6,13 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:42 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 18:15:13 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:26:55 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+static int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 

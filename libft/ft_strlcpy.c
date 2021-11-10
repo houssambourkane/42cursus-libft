@@ -6,21 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:32 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:04:32 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:26:41 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	c;
-
-	c = 0;
-	while (str[c])
-		c++;
-	return (c);
-}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

@@ -6,23 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:40:42 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 16:38:17 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:21:38 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
-}
 
 void	*ft_calloc(size_t count, size_t size)
 {

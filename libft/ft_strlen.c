@@ -6,11 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:37 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 16:55:13 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 17:58:41 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

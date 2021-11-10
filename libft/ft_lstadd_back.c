@@ -6,23 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 16:37:42 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:14:39 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/10 14:08:32 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-t_list	*ft_lstlast(t_list *lst)
-{
-	if (lst)
-	{
-		while (lst->next)
-		{
-			lst = lst->next;
-		}
-	}
-	return (lst);
-}
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

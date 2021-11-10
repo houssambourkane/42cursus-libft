@@ -6,18 +6,13 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 20:02:58 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:13:35 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:25:11 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
-int	compteur_nombre(int n)
+static int	compteur_nombre(int n)
 {
 	int		cpt;
 	long	n2;
@@ -36,7 +31,7 @@ int	compteur_nombre(int n)
 	return (cpt);
 }
 
-int	powerof(int nb, int power)
+static int	powerof(int nb, int power)
 {
 	int	i;
 	int	nb2;

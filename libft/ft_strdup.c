@@ -6,21 +6,11 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:23 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:18:41 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:26:19 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	c;
-
-	c = 0;
-	while (str[c])
-		c++;
-	return (c);
-}
 
 char	*ft_strdup(char *s1)
 {

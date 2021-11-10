@@ -6,13 +6,13 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:29:16 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 20:31:01 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:22:37 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	compteur_nombre(int n)
+static int	compteur_nombre(int n)
 {
 	int		cpt;
 	long	n2;
@@ -31,7 +31,7 @@ int	compteur_nombre(int n)
 	return (cpt);
 }
 
-char	calcul(long *n2)
+static char	calcul(long *n2)
 {
 	char	n;
 

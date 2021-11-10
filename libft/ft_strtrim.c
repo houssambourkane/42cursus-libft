@@ -6,19 +6,19 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:01:19 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:17:29 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:28:21 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(char const *s1, size_t n)
+static char	*ft_strndup(char const *s1, size_t n)
 {
 	size_t	i;
 	char	*s2;
 
 	i = 0;
-	s2 = malloc (sizeof(char) * (n + 1));
+	s2 = malloc(sizeof(char) * (n + 1));
 	if (s2 == NULL)
 		return (NULL);
 	while (s1[i] && i < n)

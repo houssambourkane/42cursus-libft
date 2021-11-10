@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 21:34:23 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/08 17:18:28 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/10 13:47:00 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s + i);
+		f(i, &s[i]);
 		i++;
 	}
 }
