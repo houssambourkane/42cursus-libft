@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:29:58 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/09 20:28:17 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/11 17:23:35 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,18 @@ static int	nb_chaine(char const *s, char c)
 
 	i = 0;
 	cpt = 0;
+	while (s[i] == c)
+		i++;
+	if (!(s[i]))
+		return (1);
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c && s[i + 1] != c)
 			cpt++;
 		i++;
 	}
+	if (s[i - 1] == c)
+		cpt--;
 	return (cpt + 1);
 }
 
@@ -70,13 +76,14 @@ char	**ft_split(char const *s, char c)
 	s_array = malloc((sizeof(char *) * nb_chaine(s, c)) + 1);
 	if (s_array == NULL)
 		return (NULL);
+	if (nb_chaine(s, c) == 0)
+		s_array[j++] = ft_strdup("");
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			s_array[j] = ft_strndup(s + i, compteur_carac(s, c, i));
+			s_array[j++] = ft_strndup(s + i, compteur_carac(s, c, i));
 			i += compteur_carac(s, c, i);
-			j++;
 		}
 		else
 			i++;

@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:38:56 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/10 10:49:56 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/11 18:16:31 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define LIBFT_H
 
 // Libraries :
-# include<stdlib.h>
+# include <stdlib.h>
 # include <stdio.h>
-# include<string.h>
+# include <string.h>
 # include <unistd.h>
 
 // Structures :

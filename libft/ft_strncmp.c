@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:40 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/10 20:32:21 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/11 13:45:42 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (((unsigned char)s1[i] || (unsigned char)s2[i]) && i < n)
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
-			return s1[i] - s2[i];
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
 }
-// int main()
-// {
-// 	char s1[] = "Houssam\0";
-// 	char s2[] = "Houssam\200";
-// 	printf("%d", ft_strncmp(s1, s2, 8));
-// 	return 0;
-// }
