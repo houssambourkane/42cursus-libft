@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:30:03 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/09 20:26:15 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 14:41:04 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	j = ft_strlen(s);
-	while (i < j + 1)
+	while (i <= j)
 	{
 		if (s[i] == (char)c)
 			return (((char *)s + i));

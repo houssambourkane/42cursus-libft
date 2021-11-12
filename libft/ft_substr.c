@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:49 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/11 18:47:32 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:36:42 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,11 @@ static char	*ft_strndup(char const *s1, size_t n)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	if (s == NULL)
+		return (NULL);
 	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
 	if (ft_strlen(s + start) < len)
 		return (ft_strdup((char *)s + start));
 	return (ft_strndup(s + start, len));
-}
-
-
-int main()
-{
-	printf("%s", ft_substr("hamza", 100, 4));
-	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 19:01:55 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/09 20:24:51 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:39:06 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (s == NULL)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

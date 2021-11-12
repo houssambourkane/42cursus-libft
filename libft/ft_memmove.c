@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 20:41:08 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/10 19:58:24 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 16:20:07 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	if (dst < src)
 	{
 		while (i < len)

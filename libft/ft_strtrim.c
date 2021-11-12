@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:01:19 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/11 13:35:39 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:38:35 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*ft_strndup(char const *s1, size_t n)
 	return (s2);
 }
 
-static int	fnct(char const *s1, char const *set)
+static int	find_i(char const *s1, char const *set)
 {
 	int	i;
 
@@ -45,17 +45,14 @@ static int	fnct(char const *s1, char const *set)
 	return (i);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	find_j(char const *s1, char const *set)
 {
-	char	*s;
-	int		i;
-	int		j;
-	size_t	l;
+	int	j;
+	int	l;
 
-	j = 0;
 	l = ft_strlen(s1) - 1;
-	i = fnct(s1, set);
-	while (l)
+	j = 0;
+	while (l > 0)
 	{
 		if (ft_strchr(set, s1[l]))
 		{
@@ -65,8 +62,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			break ;
 	}
-	if (s1[i] == '\0' && l == 0)
-		s = strdup("");
+	return (j);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*s;
+	int		i;
+	int		j;
+	size_t	l;
+
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	l = ft_strlen(s1) - 1;
+	i = find_i(s1, set);
+	j = find_j(s1, set);
+	if (s1[i] == '\0')
+		s = ft_strdup("");
 	else
 		s = ft_strndup(s1 + i, ft_strlen(s1 + i) - j);
 	return (s);

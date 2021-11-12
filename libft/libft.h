@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:38:56 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/11 18:16:31 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/12 23:32:49 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-
-
 
 // Part1 functions :
 int		ft_isalpha(int c);
@@ -77,8 +74,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-
-// Additional functions :
 
 #endif
