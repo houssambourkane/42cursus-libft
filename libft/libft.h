@@ -6,27 +6,22 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:38:56 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/12 23:32:49 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/13 13:00:45 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// Libraries :
 # include <stdlib.h>
-# include <stdio.h>
-# include <string.h>
 # include <unistd.h>
 
-// Structures :
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
 
-// Part1 functions :
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -50,8 +45,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(char *s1);
-
-// Part 2 functions :
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -63,8 +56,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-
-// Bonus functions :
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);

@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "ft_isalnum.C": "cpp",
-        "bitset": "c",
-        "string.h": "c",
-        "unistd.h": "c",
-        "libft.h": "c"
-    }
-}

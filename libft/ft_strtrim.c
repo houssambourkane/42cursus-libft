@@ -6,7 +6,7 @@
 /*   By: hbourkan <hbourkan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:01:19 by hbourkan          #+#    #+#             */
-/*   Updated: 2021/11/12 18:38:35 by hbourkan         ###   ########.fr       */
+/*   Updated: 2021/11/13 18:52:06 by hbourkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*s;
 	int		i;
 	int		j;
-	size_t	l;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	l = ft_strlen(s1) - 1;
 	i = find_i(s1, set);
 	j = find_j(s1, set);
 	if (s1[i] == '\0')
