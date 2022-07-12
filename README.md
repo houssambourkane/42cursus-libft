@@ -7,7 +7,7 @@ git clone https://github.com/houssambourkane/42cursus-libft.git libft
 ```
 ### 2. Access the directory
 ```
-cd libft
+cd libft/libft
 ```
 ### 3. Run Makefile command
 ```
